@@ -7,8 +7,10 @@
     <!-- Page content -->
     <main class="grow">
 
-      <Hero />
-      <Features />
+      <PricingHero />
+      <Pricing1 />
+      <PricingHome />
+      <Features05 />
       <Customers />
       <Faqs />
       <Cta />
@@ -22,24 +24,7 @@
 </template>
 
 <script>
-import Header from '~/partials/Header.vue'
-import Hero from '~/partials/PricingHero.vue'
-import Features from '~/partials/Features05.vue'
-import Customers from '~/partials/Customers.vue'
-import Faqs from '~/partials/Faqs.vue'
-import Cta from '~/partials/Cta.vue'
-import Footer from '~/partials/Footer.vue'
 
-export default {
-  name: 'Pricing',
-  components: {
-    Header,
-    Hero,
-    Features,
-    Customers,
-    Faqs,
-    Cta,
-    Footer,
-  },
-}
+
+
 </script>
