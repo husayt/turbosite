@@ -20,20 +20,21 @@
 
           <!-- Section header -->
           <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">Our story (so far)</h2>
+            <h2 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">Optimax Software</h2>
           </div>
 
           <div class="md:flex justify-between space-x-6 md:space-x-8 lg:space-x-14">
             <figure class="min-w-[240px]">
-              <img class="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]" src="/images/team.jpg" width="420" height="280" alt="Team" />
+              <img class="sticky top-8 mx-auto mb-12 md:mb-0 rounded-lg -rotate-[4deg]" src="../assets/logos/optimax-big.png" width="420" height="280" alt="Team" />
             </figure>
             <div class="max-w-[548px] mx-auto">
               <div class="text-slate-400 space-y-6">
                 <p>
-                  We came together over a shared excitement about building a product that could solve our own problem of where our next favourite hack is coming from. But also a product that helps everyone thrive in this market: from founders and engineers to companies and investors.
+                  We are a indie software house founded & led by I, Huseyn Guliyev, backed by over 20 years of programming experience developing the best hyper efficient programs for the world’s top banks & companies.
+.
                 </p>
                 <p>
-                  Stellar is a product that connects people around the topics and ideas that fascinate them. <strong class="text-slate-50 font-medium">The idea that we can use technology to take our experience</strong>, as security lovers, to a new dimension and leave the computer industry in better shape while we're at it.
+                  Now we would like to share our turbo fast template to help you all reach your goals faster and hence cheaper since now as ever - <strong class="text-slate-50 font-medium"> time is money</strong>. As efficiency lover, we hope to provide all the tools necessary to help you quickly create a top-end quality website.
                 </p>
                 <p>
                   You can dive into the atoms that make up a product, share the moments that move you and discuss the ideas you find compelling. We want to create a ground for <strong class="text-slate-50 font-medium">discussion and bring knowledge together</strong>, while making it more accessible and easier to grasp.

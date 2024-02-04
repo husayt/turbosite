@@ -20,10 +20,11 @@
 
         <!-- Section header -->
         <div class="text-center pb-12 md:pb-20">
-          <div class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-3">The security first platform</div>
-          <h1 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Simple plans for everyone</h1>
+          <div class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-3">Supercharge your Development</div>
+          <h1 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Affordable plans for everyone</h1>
           <div class="max-w-3xl mx-auto">
-            <p class="text-lg text-slate-400">Cut down overhead costs and ditch clunky software. Get a flexible, purpose-built tool to simplify your security with authentication services.</p>
+            <p class="text-lg text-slate-400">A small investment now, see the returns immediately with all the time you save! </p>
+            <p class="text-lg text-slate-400">A top-tier boilerplate for a low one-time payment </p>
           </div>
         </div>
 
