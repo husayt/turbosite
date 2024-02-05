@@ -1,10 +1,21 @@
+<script>
+import PricingTable from "./PricingTable.vue"
+
+export default {
+  name: "PricingHero",
+  components: {
+
+    PricingTable,
+  },
+}
+</script>
+
 <template>
   <section class="relative">
-
     <!-- Radial gradient -->
     <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
-      <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
-      <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+      <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30" />
+      <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70" />
     </div>
 
     <!-- Particles animation -->
@@ -17,32 +28,23 @@
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="pt-32 pb-20 md:pt-40 md:pb-24">
-
         <!-- Section header -->
         <div class="text-center pb-12 md:pb-20">
-          <div class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-3">The security first platform</div>
-          <h1 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Simple plans for everyone</h1>
+          <div class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-3">
+            The security first platform
+          </div>
+          <h1 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+            Simple plans for everyone
+          </h1>
           <div class="max-w-3xl mx-auto">
-            <p class="text-lg text-slate-400">Cut down overhead costs and ditch clunky software. Get a flexible, purpose-built tool to simplify your security with authentication services.</p>
+            <p class="text-lg text-slate-400">
+              Cut down overhead costs and ditch clunky software. Get a flexible, purpose-built tool to simplify your security with authentication services.
+            </p>
           </div>
         </div>
 
         <PricingTable />
-
       </div>
     </div>
   </section>
 </template>
-
-<script>
-
-import PricingTable from './PricingTable.vue'
-
-export default {
-  name: 'PricingHero',
-  components: {
-    
-    PricingTable,
-  },
-}
-</script>

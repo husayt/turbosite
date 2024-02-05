@@ -1,3 +1,18 @@
+<script>
+import { ref } from "vue"
+
+export default {
+  name: "PricingTable",
+  setup() {
+    const annual = ref(true)
+
+    return {
+      annual,
+    }
+  },
+}
+</script>
+
 <template>
   <div class="relative">
     <!-- Blurred shape -->
@@ -20,14 +35,18 @@
           <!-- Toggle switch -->
           <div class="max-md:text-center">
             <div class="inline-flex items-center whitespace-nowrap">
-              <div class="text-sm text-slate-500 font-medium mr-2 md:max-lg:hidden">Monthly</div>
+              <div class="text-sm text-slate-500 font-medium mr-2 md:max-lg:hidden">
+                Monthly
+              </div>
               <div class="relative">
-                <input type="checkbox" id="toggle" class="peer sr-only" v-model="annual" />
+                <input id="toggle" v-model="annual" type="checkbox" class="peer sr-only">
                 <label for="toggle" class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-400 px-0.5 outline-slate-400 transition-colors before:h-5 before:w-5 before:rounded-full before:bg-white before:shadow-sm before:transition-transform before:duration-150 peer-checked:bg-purple-500 peer-checked:before:translate-x-full peer-focus-visible:outline peer-focus-visible:outline-offset-2 peer-focus-visible:outline-gray-400 peer-checked:peer-focus-visible:outline-purple-500">
                   <span class="sr-only">Pay Yearly</span>
                 </label>
               </div>
-              <div class="text-sm text-slate-500 font-medium ml-2">Yearly <span class="text-teal-500">(-20%)</span></div>
+              <div class="text-sm text-slate-500 font-medium ml-2">
+                Yearly <span class="text-teal-500">(-20%)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -35,11 +54,15 @@
       <!-- Pro price -->
       <div class="px-6 flex flex-col justify-end">
         <div class="grow pb-4 mb-4 border-b border-slate-800">
-          <div class="text-base font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-0.5">Pro</div>
+          <div class="text-base font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-0.5">
+            Pro
+          </div>
           <div class="mb-1">
             <span class="text-lg font-medium text-slate-500">$</span><span class="text-3xl font-bold text-slate-50">{{ annual ? '24' : '29' }}</span><span class="text-sm text-slate-600 font-medium">/mo</span>
           </div>
-          <div class="text-slate-500">Everything at your fingertips.</div>
+          <div class="text-slate-500">
+            Everything at your fingertips.
+          </div>
         </div>
         <div class="pb-4 border-b border-slate-800">
           <a class="btn-sm text-slate-900 bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0">
@@ -50,11 +73,15 @@
       <!-- Team price -->
       <div class="px-6 flex flex-col justify-end">
         <div class="grow pb-4 mb-4 border-b border-slate-800">
-          <div class="text-base font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-0.5">Team</div>
+          <div class="text-base font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-0.5">
+            Team
+          </div>
           <div class="mb-1">
             <span class="text-lg font-medium text-slate-500">$</span><span class="text-3xl font-bold text-slate-50">{{ annual ? '49' : '54' }}</span><span class="text-sm text-slate-600 font-medium">/mo</span>
           </div>
-          <div class="text-slate-500">Everything at your fingertips.</div>
+          <div class="text-slate-500">
+            Everything at your fingertips.
+          </div>
         </div>
         <div class="pb-4 border-b border-slate-800">
           <a class="btn-sm text-white bg-purple-500 hover:bg-purple-600 w-full transition duration-150 ease-in-out group" href="#0">
@@ -65,11 +92,15 @@
       <!-- Enterprise price -->
       <div class="px-6 flex flex-col justify-end">
         <div class="grow pb-4 mb-4 border-b border-slate-800">
-          <div class="text-base font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-0.5">Enterprise</div>
+          <div class="text-base font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-0.5">
+            Enterprise
+          </div>
           <div class="mb-1">
             <span class="text-lg font-medium text-slate-500">$</span><span class="text-3xl font-bold text-slate-50">{{ annual ? '79' : '85' }}</span><span class="text-sm text-slate-600 font-medium">/mo</span>
           </div>
-          <div class="text-slate-500">Everything at your fingertips.</div>
+          <div class="text-slate-500">
+            Everything at your fingertips.
+          </div>
         </div>
         <div class="pb-4 border-b border-slate-800">
           <a class="btn-sm text-slate-900 bg-gradient-to-r from-white/80 via-white to-white/80 hover:bg-white w-full transition duration-150 ease-in-out group" href="#0">
@@ -79,20 +110,30 @@
       </div>
       <!-- # Usage -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4">Usage</div>
+        <div class="py-2 text-slate-50 font-medium mt-4">
+          Usage
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Usage</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Usage
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Usage</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Usage
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Usage</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Usage
+        </div>
       </div>
       <!-- Social Connections -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Social Connections</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Social Connections
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
@@ -120,7 +161,9 @@
       </div>
       <!-- Custom Domains -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Custom Domains</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Custom Domains
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
@@ -148,7 +191,9 @@
       </div>
       <!-- User Role Management -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">User Role Management</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          User Role Management
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
@@ -176,7 +221,9 @@
       </div>
       <!-- External Databases -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">External Databases</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          External Databases
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
@@ -204,20 +251,30 @@
       </div>
       <!-- # Features -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4">Features</div>
+        <div class="py-2 text-slate-50 font-medium mt-4">
+          Features
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Features</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Features
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Features</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Features
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Features</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Features
+        </div>
       </div>
       <!-- Custom Connection -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Custom Connection</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Custom Connection
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
@@ -245,7 +302,9 @@
       </div>
       <!-- Advanced Deployment Options -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Advanced Deployment Options</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Advanced Deployment Options
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
@@ -273,7 +332,9 @@
       </div>
       <!-- Extra Add-ons -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Extra Add-ons</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Extra Add-ons
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center h-full border-b border-slate-800 py-2 text-slate-400">
@@ -301,7 +362,9 @@
       </div>
       <!-- Admin Roles -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Admin Roles</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Admin Roles
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
@@ -323,7 +386,9 @@
       </div>
       <!-- Deploy and Monitor -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Deploy and Monitor</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Deploy and Monitor
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
@@ -345,7 +410,9 @@
       </div>
       <!-- Enterprise Add-ons -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Enterprise Add-ons</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Enterprise Add-ons
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
@@ -367,20 +434,30 @@
       </div>
       <!-- # Support -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4">Support</div>
+        <div class="py-2 text-slate-50 font-medium mt-4">
+          Support
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 hidden">Support</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 hidden">
+          Support
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Support</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Support
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">Support</div>
+        <div class="py-2 text-slate-50 font-medium mt-4 md:hidden">
+          Support
+        </div>
       </div>
       <!-- Premium Support -->
       <div class="px-6 flex flex-col justify-end">
-        <div class="py-2 text-slate-400 border-b border-slate-800">Premium Support</div>
+        <div class="py-2 text-slate-400 border-b border-slate-800">
+          Premium Support
+        </div>
       </div>
       <div class="px-6 flex flex-col justify-end">
         <div class="flex items-center border-b border-slate-800 py-2 text-slate-400 max-md:hidden">
@@ -406,19 +483,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import { ref } from 'vue'
-
-export default {
-  name: 'PricingTable',
-  setup() {
-
-    const annual = ref(true)
-
-    return {
-      annual,
-    }
-  },
-}
-</script>

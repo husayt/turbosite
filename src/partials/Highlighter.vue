@@ -1,21 +1,15 @@
-<template>
-  <div ref="containerRef">
-    <slot></slot>
-  </div>
-</template>
-
 <script>
-import { ref, onMounted, onBeforeUnmount, reactive, watch } from 'vue'
-import useMousePosition from './../utils/MousePosition'
+import { onBeforeUnmount, onMounted, reactive, ref, watch } from "vue"
+import useMousePosition from "./../utils/MousePosition"
 
 export default {
-  name: 'Highlighter',
+  name: "Highlighter",
   props: {
     refresh: {
       type: Boolean,
       default: false,
     },
-  },  
+  },
   setup(props) {
     const containerRef = ref(null)
     const mousePosition = useMousePosition()
@@ -28,26 +22,26 @@ export default {
         boxes.value = Array.from(containerRef.value.children)
       }
       initContainer()
-      window.addEventListener('resize', initContainer)
+      window.addEventListener("resize", initContainer)
     })
 
     onBeforeUnmount(() => {
-      window.removeEventListener('resize', initContainer)
+      window.removeEventListener("resize", initContainer)
     })
 
     watch(
       () => mousePosition.value,
       () => {
         onMouseMove()
-      }
+      },
     )
 
     watch(
       () => props.refresh,
       () => {
         initContainer()
-      }
-    )   
+      },
+    )
 
     const initContainer = () => {
       if (containerRef.value) {
@@ -69,10 +63,10 @@ export default {
           boxes.value.forEach((box) => {
             const boxX = -(box.getBoundingClientRect().left - rect.left) + mouse.x
             const boxY = -(box.getBoundingClientRect().top - rect.top) + mouse.y
-            box.style.setProperty('--mouse-x', `${boxX}px`)
-            box.style.setProperty('--mouse-y', `${boxY}px`)
+            box.style.setProperty("--mouse-x", `${boxX}px`)
+            box.style.setProperty("--mouse-y", `${boxY}px`)
           })
-        }        
+        }
       }
     }
 
@@ -82,3 +76,9 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div ref="containerRef">
+    <slot />
+  </div>
+</template>

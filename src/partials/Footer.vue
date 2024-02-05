@@ -1,10 +1,14 @@
+<script>
+export default {
+  name: "Footer",
+}
+</script>
+
 <template>
   <footer>
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-
       <!-- Blocks -->
       <div class="grid sm:grid-cols-12 gap-8 py-8 md:py-12">
-
         <!-- 1st block -->
         <div class="sm:col-span-12 lg:col-span-4 order-1 lg:order-none">
           <div class="h-full flex flex-col sm:flex-row lg:flex-col justify-between">
@@ -15,7 +19,9 @@
                   <img src="/images/logo.svg" width="38" height="38" alt="Stellar">
                 </router-link>
               </div>
-              <div class="text-sm text-slate-300">&copy; Cruip.com <span class="text-slate-500">-</span> All rights reserved.</div>
+              <div class="text-sm text-slate-300">
+                &copy; Cruip.com <span class="text-slate-500">-</span> All rights reserved.
+              </div>
             </div>
             <!-- Social links -->
             <ul class="flex">
@@ -46,7 +52,9 @@
 
         <!-- 2nd block -->
         <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
-          <h6 class="text-sm text-slate-50 font-medium mb-2">Products</h6>
+          <h6 class="text-sm text-slate-50 font-medium mb-2">
+            Products
+          </h6>
           <ul class="text-sm space-y-2">
             <li>
               <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Features</a>
@@ -68,7 +76,9 @@
 
         <!-- 3rd block -->
         <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
-          <h6 class="text-sm text-slate-50 font-medium mb-2">Company</h6>
+          <h6 class="text-sm text-slate-50 font-medium mb-2">
+            Company
+          </h6>
           <ul class="text-sm space-y-2">
             <li>
               <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">About us</a>
@@ -90,7 +100,9 @@
 
         <!-- 4th block -->
         <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
-          <h6 class="text-sm text-slate-50 font-medium mb-2">Resources</h6>
+          <h6 class="text-sm text-slate-50 font-medium mb-2">
+            Resources
+          </h6>
           <ul class="text-sm space-y-2">
             <li>
               <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Community</a>
@@ -106,7 +118,9 @@
 
         <!-- 5th block -->
         <div class="sm:col-span-6 md:col-span-3 lg:col-span-2">
-          <h6 class="text-sm text-slate-50 font-medium mb-2">Legals</h6>
+          <h6 class="text-sm text-slate-50 font-medium mb-2">
+            Legals
+          </h6>
           <ul class="text-sm space-y-2">
             <li>
               <a class="text-slate-400 hover:text-slate-200 transition duration-150 ease-in-out" href="#0">Refund policy</a>
@@ -122,15 +136,7 @@
             </li>
           </ul>
         </div>
-
       </div>
-
     </div>
   </footer>
 </template>
-
-<script>
-export default {
-  name: 'Footer',
-}
-</script>

@@ -1,8 +1,12 @@
+<script>
+export default {
+  name: "ResetPassword",
+}
+</script>
+
 <template>
   <main class="grow">
-
     <section class="relative">
-
       <!-- Illustration -->
       <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-36 blur-2xl opacity-70 pointer-events-none -z-10" aria-hidden="true">
         <img src="/images/auth-illustration.svg" class="max-w-none" width="1440" height="450" alt="Page Illustration">
@@ -10,7 +14,6 @@
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div class="pt-32 pb-12 md:pt-40 md:pb-20">
-
           <!-- Page header -->
           <div class="max-w-3xl mx-auto text-center pb-12">
             <!-- Logo -->
@@ -22,17 +25,18 @@
               </router-link>
             </div>
             <!-- Page title -->
-            <h1 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">Reset your password</h1>
+            <h1 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">
+              Reset your password
+            </h1>
           </div>
 
           <!-- Form -->
           <div class="max-w-sm mx-auto">
-
             <form>
               <div class="space-y-4">
                 <div>
                   <label class="block text-sm text-slate-300 font-medium mb-1" for="email">Email</label>
-                  <input id="email" class="form-input w-full" type="email" required />
+                  <input id="email" class="form-input w-full" type="email" required>
                 </div>
               </div>
               <div class="mt-6">
@@ -41,19 +45,9 @@
                 </button>
               </div>
             </form>
-
           </div>
-
         </div>
       </div>
-
     </section>
-
   </main>
 </template>
-
-<script>
-export default {
-  name: 'ResetPassword',
-}
-</script>

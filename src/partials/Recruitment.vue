@@ -1,6 +1,79 @@
+<script>
+export default {
+  name: "Recruitment",
+  setup() {
+    const items = [
+      {
+        area: "Engineering",
+        positions: [
+          {
+            title: "Software Engineering Intern",
+            location: "Remote / North America",
+            link: "#0",
+          },
+          {
+            title: "Software Engineer, Core Infrastructure",
+            location: "Remote",
+            link: "#0",
+          },
+          {
+            title: "Software Engineer, Data Platform",
+            location: "Remote / Europe",
+            link: "#0",
+          },
+          {
+            title: "Software Engineer, Marketing Systems",
+            location: "Remote / North America",
+            link: "#0",
+          },
+        ],
+      },
+      {
+        area: "Marketing",
+        positions: [
+          {
+            title: "Product Marketing Manager",
+            location: "Remote / North America",
+            link: "#0",
+          },
+          {
+            title: "Marketing Manager",
+            location: "Remote / Europe",
+            link: "#0",
+          },
+        ],
+      },
+      {
+        area: "Design",
+        positions: [
+          {
+            title: "Product Designer, Consumer",
+            location: "Remote / North America",
+            link: "#0",
+          },
+          {
+            title: "Senior Product Designer",
+            location: "Remote / Europe",
+            link: "#0",
+          },
+          {
+            title: "Lead Designer",
+            location: "Remote / Europe",
+            link: "#0",
+          },
+        ],
+      },
+    ]
+
+    return {
+      items,
+    }
+  },
+}
+</script>
+
 <template>
   <section class="relative">
-
     <!-- Blurred shape -->
     <div class="absolute top-0 -translate-y-1/3 left-1/2 -translate-x-1/2 ml-24 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
@@ -16,11 +89,14 @@
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="py-12 md:py-20 border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.800),transparent)1]">
-
         <!-- Section header -->
         <div class="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-          <h2 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">Join a team of makers</h2>
-          <p class="text-lg text-slate-400">We are makers at heart. Problem solvers and storytellers. We are a diverse team of individuals who build things to make our customers happy.</p>
+          <h2 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+            Join a team of makers
+          </h2>
+          <p class="text-lg text-slate-400">
+            We are makers at heart. Problem solvers and storytellers. We are a diverse team of individuals who build things to make our customers happy.
+          </p>
         </div>
 
         <!-- Icons with text -->
@@ -35,8 +111,12 @@
                 </g>
               </svg>
             </div>
-            <div class="font-bold text-slate-100 mb-1">Passionate</div>
-            <p class="text-sm text-slate-400">You are passionate about digital products of any kind and are a builder at heart.</p>
+            <div class="font-bold text-slate-100 mb-1">
+              Passionate
+            </div>
+            <p class="text-sm text-slate-400">
+              You are passionate about digital products of any kind and are a builder at heart.
+            </p>
           </div>
           <!-- Block #2 -->
           <div class="text-center p-5">
@@ -45,8 +125,12 @@
                 <path class="fill-slate-200" d="M9.423 12.278H.87L11.614.458l-1.037 7.264h8.553L8.386 19.542l1.037-7.264Zm-6.293-1h7.447l-.74 5.18 7.033-7.736H9.423l.74-5.18-7.033 7.736Z" opacity=".8" />
               </svg>
             </div>
-            <div class="font-bold text-slate-100 mb-1">Energetic</div>
-            <p class="text-sm text-slate-400">You are passionate about digital products of any kind and are a builder at heart.</p>
+            <div class="font-bold text-slate-100 mb-1">
+              Energetic
+            </div>
+            <p class="text-sm text-slate-400">
+              You are passionate about digital products of any kind and are a builder at heart.
+            </p>
           </div>
           <!-- Block #3 -->
           <div class="text-center p-5">
@@ -58,47 +142,52 @@
                 </g>
               </svg>
             </div>
-            <div class="font-bold text-slate-100 mb-1">Achiever</div>
-            <p class="text-sm text-slate-400">You are passionate about digital products of any kind and are a builder at heart.</p>
+            <div class="font-bold text-slate-100 mb-1">
+              Achiever
+            </div>
+            <p class="text-sm text-slate-400">
+              You are passionate about digital products of any kind and are a builder at heart.
+            </p>
           </div>
         </div>
-
       </div>
     </div>
 
     <!-- Images -->
     <div class="max-w-[1440px] mx-auto px-4 md:px-0">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 md:-mx-5">
-        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-01.jpg" width="352" height="220" alt="Recruitment 01" />
-        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-02.jpg" width="352" height="220" alt="Recruitment 02" />
-        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-03.jpg" width="352" height="220" alt="Recruitment 03" />
-        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-04.jpg" width="352" height="220" alt="Recruitment 04" />
+        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-01.jpg" width="352" height="220" alt="Recruitment 01">
+        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-02.jpg" width="352" height="220" alt="Recruitment 02">
+        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-03.jpg" width="352" height="220" alt="Recruitment 03">
+        <img class="w-full aspect-[16/10] object-cover rounded-lg" src="/images/recruitment-04.jpg" width="352" height="220" alt="Recruitment 04">
       </div>
     </div>
 
     <!-- Positions -->
     <div class="relative px-4 sm:px-6">
-
       <!-- Blurred shape -->
       <div class="absolute top-0 left-1/2 -translate-x-1/2 translate-y-1/3 ml-24 blur-2xl opacity-40 pointer-events-none" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
           <defs>
             <linearGradient id="bs2-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%">
-              <stop offset="0%" stop-color="#6366F1"></stop>
-              <stop offset="100%" stop-color="#6366F1" stop-opacity="0"></stop>
+              <stop offset="0%" stop-color="#6366F1" />
+              <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
             </linearGradient>
           </defs>
-          <path fill="url(#bs2-a)" fill-rule="evenodd" d="m346 898 461 369-284 58z" transform="translate(-346 -898)"></path>
+          <path fill="url(#bs2-a)" fill-rule="evenodd" d="m346 898 461 369-284 58z" transform="translate(-346 -898)" />
         </svg>
       </div>
 
       <div class="max-w-3xl mx-auto py-12 md:py-20">
-        <h3 class="h3 inline-flex bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-8 md:pb-16">Open positions</h3>
+        <h3 class="h3 inline-flex bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-8 md:pb-16">
+          Open positions
+        </h3>
         <div class="space-y-8">
-
           <template v-for="item in items">
             <div>
-              <h4 class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-3">{{ item.area }}</h4>
+              <h4 class="inline-flex font-medium bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200 pb-3">
+                {{ item.area }}
+              </h4>
               <ul class="divide-y divide-slate-800">
                 <template v-for="position in item.positions">
                   <li class="flex flex-col md:flex-row flex-wrap justify-between py-5">
@@ -109,84 +198,8 @@
               </ul>
             </div>
           </template>
-
         </div>
       </div>
     </div>
-
   </section>
 </template>
-
-<script>
-export default {
-  name: 'Recruitment',
-  setup() {
-    const items = [
-      {
-        area: 'Engineering',
-        positions: [
-          {
-            title: 'Software Engineering Intern',
-            location: 'Remote / North America',
-            link: '#0',
-          },
-          {
-            title: 'Software Engineer, Core Infrastructure',
-            location: 'Remote',
-            link: '#0',
-          },
-          {
-            title: 'Software Engineer, Data Platform',
-            location: 'Remote / Europe',
-            link: '#0',
-          },
-          {
-            title: 'Software Engineer, Marketing Systems',
-            location: 'Remote / North America',
-            link: '#0',
-          },
-        ]
-      },
-      {
-        area: 'Marketing',
-        positions: [
-          {
-            title: 'Product Marketing Manager',
-            location: 'Remote / North America',
-            link: '#0',
-          },
-          {
-            title: 'Marketing Manager',
-            location: 'Remote / Europe',
-            link: '#0',
-          },
-        ]
-      },
-      {
-        area: 'Design',
-        positions: [
-          {
-            title: 'Product Designer, Consumer',
-            location: 'Remote / North America',
-            link: '#0',
-          },
-          {
-            title: 'Senior Product Designer',
-            location: 'Remote / Europe',
-            link: '#0',
-          },
-          {
-            title: 'Lead Designer',
-            location: 'Remote / Europe',
-            link: '#0',
-          },
-        ]
-      },
-    ]
-
-    return {
-      items
-    }
-  }
-}
-</script>

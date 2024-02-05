@@ -1,3 +1,51 @@
+<script>
+import { onMounted, ref } from "vue"
+
+// Import Swiper
+import Swiper from "swiper"
+import { Navigation } from "swiper/modules"
+import "swiper/css"
+
+Swiper.use([Navigation])
+
+export default {
+  name: "IntegrationssCarousel",
+  setup() {
+    const swiperInitialized = ref(false)
+
+    onMounted(() => {
+      const carousel = new Swiper(".stellar-carousel", {
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+        grabCursor: true,
+        loop: false,
+        centeredSlides: false,
+        initialSlide: 0,
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".carousel-next",
+          prevEl: ".carousel-prev",
+        },
+      })
+      swiperInitialized.value = true
+    })
+
+    return {
+      swiperInitialized,
+    }
+  },
+}
+</script>
+
 <template>
   <!-- Carousel built with Swiper.js [https://swiperjs.com/] -->
   <!-- * Custom styles in src/css/additional-styles/theme.scss -->
@@ -11,10 +59,14 @@
               <img src="/images/integrations-01.svg" width="40" height="40" alt="Icon 01">
               <img class="absolute top-0 -right-1" src="/images/star.svg" width="16" height="16" alt="Star" aria-hidden="true">
             </div>
-            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">Retool</router-link>
+            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">
+              Retool
+            </router-link>
           </div>
           <div class="grow mb-4">
-            <div class="text-sm text-slate-400">Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.</div>
+            <div class="text-sm text-slate-400">
+              Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.
+            </div>
           </div>
           <div class="flex justify-between">
             <div class="flex -space-x-3 -ml-0.5">
@@ -40,10 +92,14 @@
               <img src="/images/integrations-02.svg" width="40" height="40" alt="Icon 02">
               <img class="absolute top-0 -right-1" src="/images/star.svg" width="16" height="16" alt="Star" aria-hidden="true">
             </div>
-            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">Zapier</router-link>
+            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">
+              Zapier
+            </router-link>
           </div>
           <div class="grow mb-4">
-            <div class="text-sm text-slate-400">Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.</div>
+            <div class="text-sm text-slate-400">
+              Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.
+            </div>
           </div>
           <div class="flex justify-between">
             <div class="flex -space-x-3 -ml-0.5">
@@ -68,10 +124,14 @@
               <img src="/images/integrations-03.svg" width="40" height="40" alt="Icon 03">
               <img class="absolute top-0 -right-1" src="/images/star.svg" width="16" height="16" alt="Star" aria-hidden="true">
             </div>
-            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">Airtable</router-link>
+            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">
+              Airtable
+            </router-link>
           </div>
           <div class="grow mb-4">
-            <div class="text-sm text-slate-400">Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.</div>
+            <div class="text-sm text-slate-400">
+              Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.
+            </div>
           </div>
           <div class="flex justify-between">
             <div class="flex -space-x-3 -ml-0.5">
@@ -97,10 +157,14 @@
               <img src="/images/integrations-04.svg" width="40" height="40" alt="Icon 04">
               <img class="absolute top-0 -right-1" src="/images/star.svg" width="16" height="16" alt="Star" aria-hidden="true">
             </div>
-            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">Jira</router-link>
+            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">
+              Jira
+            </router-link>
           </div>
           <div class="grow mb-4">
-            <div class="text-sm text-slate-400">Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.</div>
+            <div class="text-sm text-slate-400">
+              Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.
+            </div>
           </div>
           <div class="flex justify-between">
             <div class="flex -space-x-3 -ml-0.5">
@@ -126,10 +190,14 @@
               <img src="/images/integrations-05.svg" width="40" height="40" alt="Icon 05">
               <img class="absolute top-0 -right-1" src="/images/star.svg" width="16" height="16" alt="Star" aria-hidden="true">
             </div>
-            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">GitLab</router-link>
+            <router-link class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0" to="/integrations-single">
+              GitLab
+            </router-link>
           </div>
           <div class="grow mb-4">
-            <div class="text-sm text-slate-400">Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.</div>
+            <div class="text-sm text-slate-400">
+              Stellar makes it easy to build extensions by providing an authentication provider that handles the OAuth flow.
+            </div>
           </div>
           <div class="flex justify-between">
             <div class="flex -space-x-3 -ml-0.5">
@@ -167,51 +235,3 @@
     </button>
   </div>
 </template>
-
-<script>
-import { onMounted, ref } from 'vue'
-
-// Import Swiper
-import Swiper from 'swiper'
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css'
-Swiper.use([Navigation])
-
-export default {
-  name: 'IntegrationssCarousel',
-  setup() {
-
-    const swiperInitialized = ref(false)
-
-    onMounted(() => {
-      const carousel = new Swiper('.stellar-carousel', {
-        breakpoints: {
-          320: {
-            slidesPerView: 1
-          },
-          640: {
-            slidesPerView: 2
-          },
-          1024: {
-            slidesPerView: 3
-          }
-        },
-        grabCursor: true,
-        loop: false,
-        centeredSlides: false,
-        initialSlide: 0,
-        spaceBetween: 24,
-        navigation: {
-          nextEl: '.carousel-next',
-          prevEl: '.carousel-prev',
-        },
-      })
-      swiperInitialized.value = true
-    })
-
-    return {
-      swiperInitialized,
-    }
-  }
-}
-</script>

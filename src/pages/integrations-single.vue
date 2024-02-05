@@ -1,18 +1,30 @@
+<script>
+import Header from "~/partials/Header.vue"
+
+import Footer from "~/partials/Footer.vue"
+
+export default {
+  name: "IntegrationsSingle",
+  components: {
+    Header,
+
+    Footer,
+  },
+}
+</script>
+
 <template>
   <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-
     <!-- Site header -->
     <Header />
 
     <!-- Page content -->
     <main class="grow">
-
       <section class="relative">
-
         <!-- Radial gradient -->
         <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
-          <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
-          <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+          <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30" />
+          <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70" />
         </div>
 
         <!-- Particles animation -->
@@ -25,15 +37,11 @@
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <div class="pt-32 md:pt-40">
-
             <div class="md:flex md:justify-between">
-
               <!-- Page content -->
               <div class="md:grow pb-12 md:pb-20">
                 <div class="max-w-[720px]">
-
                   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-16">
-
                     <!-- Back button -->
                     <div class="shrink-0">
                       <div class="sticky top-6">
@@ -49,12 +57,13 @@
                     <!-- Content -->
                     <div>
                       <article class="pb-12 mb-12 border-b [border-image:linear-gradient(to_right,transparent,theme(colors.slate.800),transparent)1]">
-
                         <figure class="bg-slate-700/20 border border-slate-300/10 p-4 rounded-3xl mb-8">
-                          <img class="w-full rounded-2xl" src="/images/integration-image.png" width="586" height="316" alt="Integration image" />
+                          <img class="w-full rounded-2xl" src="/images/integration-image.png" width="586" height="316" alt="Integration image">
                         </figure>
 
-                        <h1 class="sr-only">GitHub</h1>
+                        <h1 class="sr-only">
+                          GitHub
+                        </h1>
 
                         <!-- Post content -->
                         <div class="prose max-w-none text-slate-400 prose-headings:text-slate-50 prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-4 prose-p:leading-relaxed prose-a:text-purple-500 prose-a:no-underline hover:prose-a:underline prose-strong:text-slate-50 prose-strong:font-medium prose-blockquote:pl-5 prose-blockquote:xl:-ml-5 prose-blockquote:border-l-2 prose-blockquote:border-purple-500 prose-blockquote:font-medium prose-blockquote:text-slate-300 prose-blockquote:italic">
@@ -76,36 +85,34 @@
                       </article>
 
                       <aside class="pl-6 border-l-2 border-purple-500">
-                        <p class="inline-flex font-medium italic text-lg bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">“ This integration is so perfect it tickles my brain. It ensures that your work is in sync across your entire team. ”</p>
+                        <p class="inline-flex font-medium italic text-lg bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                          “ This integration is so perfect it tickles my brain. It ensures that your work is in sync across your entire team. ”
+                        </p>
                         <footer class="flex items-center space-x-4">
-                          <img class="shrink-0 rounded-full" src="/images/post-avatar.jpg" width="32" height="32" alt="Author" />
+                          <img class="shrink-0 rounded-full" src="/images/post-avatar.jpg" width="32" height="32" alt="Author">
                           <div class="text-sm font-medium text-slate-300">
                             Mike Hunt <span class="text-slate-700">-</span> <a class="text-purple-500 hover:underline" href="#0">Thunderbolt</a>
                           </div>
                         </footer>
                       </aside>
                     </div>
-
                   </div>
-
                 </div>
               </div>
 
               <!-- Sidebar -->
               <aside class="md:w-64 lg:w-80 md:shrink-0 md:pt-[3.75rem] lg:pt-0 pb-12 md:pb-20">
                 <div class="sticky top-6 md:pl-6 lg:pl-10">
-
                   <!-- Sidebar content -->
                   <div class="space-y-6">
-
                     <!-- Widget -->
                     <div class="bg-gradient-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800">
                       <div class="px-5 py-6">
                         <div class="text-center mb-5">
                           <div class="mb-4">
                             <div class="relative inline-flex">
-                              <img src="/images/integrations-08.svg" width="80" height="80" alt="Icon 08" />
-                              <img class="absolute top-0 -right-1" src="/images/star.svg" width="24" height="24" alt="Star" aria-hidden="true" />
+                              <img src="/images/integrations-08.svg" width="80" height="80" alt="Icon 08">
+                              <img class="absolute top-0 -right-1" src="/images/star.svg" width="24" height="24" alt="Star" aria-hidden="true">
                             </div>
                           </div>
                           <button class="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out group [background:linear-gradient(theme(colors.slate.900),_theme(colors.slate.900))_padding-box,_conic-gradient(theme(colors.slate.400),_theme(colors.slate.700)_25%,_theme(colors.slate.700)_75%,_theme(colors.slate.400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/70 before:rounded-full before:pointer-events-none">
@@ -139,37 +146,16 @@
                         </ul>
                       </div>
                     </div>
-
                   </div>
-
                 </div>
               </aside>
-
             </div>
-
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- Site footer -->
     <Footer />
-
   </div>
 </template>
-
-<script>
-import Header from '~/partials/Header.vue'
-
-import Footer from '~/partials/Footer.vue'
-
-export default {
-  name: 'IntegrationsSingle',
-  components: {
-    Header,
-    
-    Footer,
-  },
-}
-</script>

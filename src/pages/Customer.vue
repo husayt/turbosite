@@ -1,18 +1,32 @@
+<script>
+import Header from "~/partials/Header.vue"
+
+import CustomersRelated from "~/partials/CustomersRelated.vue"
+import Footer from "~/partials/Footer.vue"
+
+export default {
+  name: "Customer",
+  components: {
+    Header,
+
+    CustomersRelated,
+    Footer,
+  },
+}
+</script>
+
 <template>
   <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-
     <!-- Site header -->
     <Header />
 
     <!-- Page content -->
     <main class="grow">
-
       <section class="relative">
-
         <!-- Radial gradient -->
         <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
-          <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
-          <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+          <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30" />
+          <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70" />
         </div>
 
         <!-- Particles animation -->
@@ -25,26 +39,30 @@
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <div class="pt-32 md:pt-40 border-b [border-image:linear-gradient(to_right,transparent,theme(colors.slate.800),transparent)1]">
-
             <div class="md:flex md:justify-between">
-
               <!-- Page content -->
               <div class="md:grow pb-12 md:pb-20">
                 <div class="max-w-3xl">
-
                   <article class="pb-12 mb-12 border-b [border-image:linear-gradient(to_right,transparent,theme(colors.slate.800),transparent)1]">
-
                     <div class="mb-4">
-                      <router-link class="inline-flex text-sm font-medium text-purple-500 group" to="/customers"><span class="tracking-normal group-hover:-translate-x-0.5 transition-transform duration-150 ease-in-out mr-1">&lt;-</span> Go Back</router-link>
+                      <router-link class="inline-flex text-sm font-medium text-purple-500 group" to="/customers">
+                        <span class="tracking-normal group-hover:-translate-x-0.5 transition-transform duration-150 ease-in-out mr-1">&lt;-</span> Go Back
+                      </router-link>
                     </div>
 
                     <header>
-                      <h1 class="h2 inline-flex bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">How Airbnb leverages Stellar X to onboard new hosts</h1>
+                      <h1 class="h2 inline-flex bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                        How Airbnb leverages Stellar X to onboard new hosts
+                      </h1>
                       <div class="text-sm flex items-center space-x-4 mb-8">
-                        <img class="rounded-full" src="/images/customer-avatar-03.jpg" width="32" height="32" alt="Customer Avatar 03" />
+                        <img class="rounded-full" src="/images/customer-avatar-03.jpg" width="32" height="32" alt="Customer Avatar 03">
                         <div>
-                          <div class="text-slate-300 font-medium">Becky Taylor</div>
-                          <div class="text-slate-500">Product Marketing Manager</div>
+                          <div class="text-slate-300 font-medium">
+                            Becky Taylor
+                          </div>
+                          <div class="text-slate-500">
+                            Product Marketing Manager
+                          </div>
                         </div>
                       </div>
                     </header>
@@ -99,24 +117,23 @@
                   </article>
 
                   <CustomersRelated />
-
                 </div>
               </div>
 
               <!-- Sidebar -->
               <aside class="md:w-64 lg:w-80 md:shrink-0 md:pt-[3.75rem] lg:pt-0 pb-12 md:pb-20">
                 <div class="sticky top-6 md:pl-6 lg:pl-10">
-
                   <!-- Sidebar content -->
                   <div class="space-y-6">
-
                     <!-- Widget -->
                     <div class="bg-gradient-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800">
                       <div class="px-5 py-6">
                         <div class="mb-5">
                           <div class="flex items-center space-x-4">
-                            <img src="/images/customer-badge.svg" width="64" height="64" alt="Customer badge" />
-                            <div class="text-lg font-semibold text-slate-100">Airbnb Inc.</div>
+                            <img src="/images/customer-badge.svg" width="64" height="64" alt="Customer badge">
+                            <div class="text-lg font-semibold text-slate-100">
+                              Airbnb Inc.
+                            </div>
                           </div>
                         </div>
                         <ul class="text-sm">
@@ -148,39 +165,16 @@
                         </ul>
                       </div>
                     </div>
-
                   </div>
-
                 </div>
               </aside>
-
             </div>
-
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- Site footer -->
     <Footer />
-
   </div>
 </template>
-
-<script>
-import Header from '~/partials/Header.vue'
-
-import CustomersRelated from '~/partials/CustomersRelated.vue';
-import Footer from '~/partials/Footer.vue'
-
-export default {
-  name: 'Customer',
-  components: {
-    Header,
-    
-    CustomersRelated,
-    Footer,
-},
-}
-</script>

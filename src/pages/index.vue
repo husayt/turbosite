@@ -1,12 +1,16 @@
+<script>
+export default {
+  name: "Home",
+}
+</script>
+
 <template>
   <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-
     <!-- Site header -->
     <Header />
 
     <!-- Page content -->
     <main class="grow">
-
       <Hero />
       <Clients />
       <Features />
@@ -17,19 +21,9 @@
       <PricingHome />
       <Testimonials />
       <Cta />
-
     </main>
-    
-    <!-- Site footer -->
-    <Footer />    
 
+    <!-- Site footer -->
+    <Footer />
   </div>
 </template>
-
-<script>
-
-
-export default {
-  name: 'Home',
-}
-</script>

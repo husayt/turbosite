@@ -1,8 +1,12 @@
+<script>
+export default {
+  name: "SignIn",
+}
+</script>
+
 <template>
   <main class="grow">
-
     <section class="relative">
-
       <!-- Illustration -->
       <div class="md:block absolute left-1/2 -translate-x-1/2 -mt-36 blur-2xl opacity-70 pointer-events-none -z-10" aria-hidden="true">
         <img src="/images/auth-illustration.svg" class="max-w-none" width="1440" height="450" alt="Page Illustration">
@@ -10,7 +14,6 @@
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div class="pt-32 pb-12 md:pt-40 md:pb-20">
-
           <!-- Page header -->
           <div class="max-w-3xl mx-auto text-center pb-12">
             <!-- Logo -->
@@ -22,29 +25,30 @@
               </router-link>
             </div>
             <!-- Page title -->
-            <h1 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">Create your free account</h1>
+            <h1 class="h2 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60">
+              Create your free account
+            </h1>
           </div>
 
           <!-- Form -->
           <div class="max-w-sm mx-auto">
-
             <form>
               <div class="space-y-4">
                 <div>
                   <label class="block text-sm text-slate-300 font-medium mb-1" for="company">Company <span class="text-rose-500">*</span></label>
-                  <input id="company" class="form-input w-full" type="text" placeholder="mE.g., Acme Inc." required />
+                  <input id="company" class="form-input w-full" type="text" placeholder="mE.g., Acme Inc." required>
                 </div>
                 <div>
                   <label class="block text-sm text-slate-300 font-medium mb-1" for="full-name">Full Name <span class="text-rose-500">*</span></label>
-                  <input id="full-name" class="form-input w-full" type="text" placeholder="E.g., Mark Rossi" required />
+                  <input id="full-name" class="form-input w-full" type="text" placeholder="E.g., Mark Rossi" required>
                 </div>
                 <div>
                   <label class="block text-sm text-slate-300 font-medium mb-1" for="email">Email <span class="text-rose-500">*</span></label>
-                  <input id="email" class="form-input w-full" type="email" placeholder="markrossi@company.com" required />
+                  <input id="email" class="form-input w-full" type="email" placeholder="markrossi@company.com" required>
                 </div>
                 <div>
                   <label class="block text-sm text-slate-300 font-medium mb-1" for="password">Password <span class="text-rose-500">*</span></label>
-                  <input id="password" class="form-input w-full" type="password" autocomplete="on" required />
+                  <input id="password" class="form-input w-full" type="password" autocomplete="on" required>
                 </div>
                 <div>
                   <label class="block text-sm text-slate-300 font-medium mb-1" for="referrer">Where did you hear about us? <span class="text-rose-500">*</span></label>
@@ -64,15 +68,19 @@
 
             <div class="text-center mt-4">
               <div class="text-sm text-slate-400">
-                Already have an account? <router-link class="font-medium text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" to="/signin">Sign in</router-link>
+                Already have an account? <router-link class="font-medium text-purple-500 hover:text-purple-400 transition duration-150 ease-in-out" to="/signin">
+                  Sign in
+                </router-link>
               </div>
             </div>
 
             <!-- Divider -->
             <div class="flex items-center my-6">
-              <div class="border-t border-slate-800 grow mr-3" aria-hidden="true"></div>
-              <div class="text-sm text-slate-500 italic">or</div>
-              <div class="border-t border-slate-800 grow ml-3" aria-hidden="true"></div>
+              <div class="border-t border-slate-800 grow mr-3" aria-hidden="true" />
+              <div class="text-sm text-slate-500 italic">
+                or
+              </div>
+              <div class="border-t border-slate-800 grow ml-3" aria-hidden="true" />
             </div>
 
             <!-- Social login -->
@@ -94,19 +102,9 @@
                 </span>
               </button>
             </div>
-
           </div>
-
         </div>
       </div>
-
     </section>
-
   </main>
 </template>
-
-<script>
-export default {
-  name: 'SignIn',
-}
-</script>

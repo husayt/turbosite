@@ -1,19 +1,33 @@
+<script>
+import Header from "~/partials/Header.vue"
+
+import Cta from "~/partials/Cta03.vue"
+import Footer from "~/partials/Footer.vue"
+
+export default {
+  name: "Changelog",
+  components: {
+    Header,
+
+    Cta,
+    Footer,
+  },
+}
+</script>
+
 <template>
   <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
-
     <!-- Site header -->
     <Header />
 
     <!-- Page content -->
     <main class="grow">
-
       <!-- Content -->
       <section class="relative">
-
         <!-- Radial gradient -->
         <div class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-[800px] aspect-square" aria-hidden="true">
-          <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30"></div>
-          <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70"></div>
+          <div class="absolute inset-0 translate-z-0 bg-purple-500 rounded-full blur-[120px] opacity-30" />
+          <div class="absolute w-64 h-64 translate-z-0 bg-purple-400 rounded-full blur-[80px] opacity-70" />
         </div>
 
         <!-- Particles animation -->
@@ -26,19 +40,22 @@
 
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <div class="pt-32 pb-12 md:pt-40 md:pb-20">
-
             <!-- Page header -->
             <div class="text-center pb-12 md:pb-20">
-              <h1 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">What's New</h1>
+              <h1 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+                What's New
+              </h1>
               <div class="max-w-3xl mx-auto">
-                <p class="text-lg text-slate-400">New updates and improvements to Stellar.</p>
+                <p class="text-lg text-slate-400">
+                  New updates and improvements to Stellar.
+                </p>
               </div>
             </div>
 
             <!-- Content -->
             <div class="max-w-3xl mx-auto">
               <div class="relative">
-                <div class="absolute h-full top-4 left-[2px] w-0.5 bg-slate-800 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_150px,theme(colors.white))] -z-10 overflow-hidden after:absolute after:h-4 after:top-0 after:-translate-y-full after:left-0 after:w-0.5 after:bg-[linear-gradient(180deg,_transparent,_theme(colors.purple.500/.65)_25%,_theme(colors.purple.200)_50%,_theme(colors.purple.500/.65)_75%,_transparent)] after:animate-shine" aria-hidden="true"></div>
+                <div class="absolute h-full top-4 left-[2px] w-0.5 bg-slate-800 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_150px,theme(colors.white))] -z-10 overflow-hidden after:absolute after:h-4 after:top-0 after:-translate-y-full after:left-0 after:w-0.5 after:bg-[linear-gradient(180deg,_transparent,_theme(colors.purple.500/.65)_25%,_theme(colors.purple.200)_50%,_theme(colors.purple.500/.65)_75%,_transparent)] after:animate-shine" aria-hidden="true" />
                 <!-- Post -->
                 <article class="pt-12 first-of-type:pt-0 group">
                   <div class="md:flex">
@@ -49,7 +66,9 @@
                     </div>
                     <div class="grow ml-8 md:ml-0 pb-12 group-last-of-type:pb-0 border-b [border-image:linear-gradient(to_right,theme(colors.slate.700/.3),theme(colors.slate.700),theme(colors.slate.700/.3))1] group-last-of-type:border-none">
                       <header>
-                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">Weekly Update: Stellar X</h2>
+                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">
+                          Weekly Update: Stellar X
+                        </h2>
                       </header>
                       <figure class="bg-gradient-to-b from-slate-300/20 to-transparent rounded-3xl p-px mb-8">
                         <img class="w-full rounded-[inherit]" src="/images/changelog-01.png" width="574" height="326" alt="Changelog 01">
@@ -71,7 +90,9 @@
                     </div>
                     <div class="grow ml-8 md:ml-0 pb-12 group-last-of-type:pb-0 border-b [border-image:linear-gradient(to_right,theme(colors.slate.700/.3),theme(colors.slate.700),theme(colors.slate.700/.3))1] group-last-of-type:border-none">
                       <header>
-                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">Refreshed main menu navigation</h2>
+                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">
+                          Refreshed main menu navigation
+                        </h2>
                       </header>
                       <figure class="bg-gradient-to-b from-slate-300/20 to-transparent rounded-3xl p-px mb-8">
                         <img class="w-full rounded-[inherit]" src="/images/changelog-02.png" width="574" height="326" alt="Changelog 02">
@@ -98,7 +119,9 @@
                     </div>
                     <div class="grow ml-8 md:ml-0 pb-12 group-last-of-type:pb-0 border-b [border-image:linear-gradient(to_right,theme(colors.slate.700/.3),theme(colors.slate.700),theme(colors.slate.700/.3))1] group-last-of-type:border-none">
                       <header>
-                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">New cloud architecture</h2>
+                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">
+                          New cloud architecture
+                        </h2>
                       </header>
                       <figure class="bg-gradient-to-b from-slate-300/20 to-transparent rounded-3xl p-px mb-8">
                         <img class="w-full rounded-[inherit]" src="/images/changelog-03.png" width="574" height="326" alt="Changelog 03">
@@ -120,7 +143,9 @@
                     </div>
                     <div class="grow ml-8 md:ml-0 pb-12 group-last-of-type:pb-0 border-b [border-image:linear-gradient(to_right,theme(colors.slate.700/.3),theme(colors.slate.700),theme(colors.slate.700/.3))1] group-last-of-type:border-none">
                       <header>
-                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">Updates to the Filtering API</h2>
+                        <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 leading-8 pb-6">
+                          Updates to the Filtering API
+                        </h2>
                       </header>
                       <figure class="bg-gradient-to-b from-slate-300/20 to-transparent rounded-3xl p-px mb-8">
                         <img class="w-full rounded-[inherit]" src="/images/changelog-04.png" width="574" height="326" alt="Changelog 04">
@@ -153,35 +178,14 @@
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
-
       </section>
 
       <Cta />
-
     </main>
 
     <!-- Site footer -->
     <Footer />
-
   </div>
 </template>
-
-<script>
-import Header from '~/partials/Header.vue'
-
-import Cta from '~/partials/Cta03.vue'
-import Footer from '~/partials/Footer.vue'
-
-export default {
-  name: 'Changelog',
-  components: {
-    Header,
-    
-    Cta,
-    Footer,
-  },
-}
-</script>

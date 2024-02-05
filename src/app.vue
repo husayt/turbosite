@@ -1,22 +1,19 @@
 <script>
-import AOS from 'aos'
+import AOS from "aos"
 
 export default {
   mounted() {
     AOS.init({
       once: true,
-      disable: 'phone',
+      disable: "phone",
       duration: 500,
-      easing: 'ease-out-cubic',
-    }) 
-  }
+      easing: "ease-out-cubic",
+    })
+  },
 }
 </script>
 
 <template>
-  <div>
-    
-  </div>
+  <div />
   <NuxtPage />
 </template>
-

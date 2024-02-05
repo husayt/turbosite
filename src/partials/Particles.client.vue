@@ -1,15 +1,9 @@
-<template>
-  <div ref="canvasContainerRef" aria-hidden="true">
-    <canvas ref="canvasRef"></canvas>
-  </div>
-</template>
-
 <script>
-import { ref, onMounted, onBeforeUnmount, reactive, watch } from 'vue'
-import useMousePosition from './../utils/MousePosition'
+import { onBeforeUnmount, onMounted, reactive, ref, watch } from "vue"
+import useMousePosition from "./../utils/MousePosition"
 
 export default {
-  name: 'Particles',
+  name: "Particles",
   props: {
     quantity: {
       type: Number,
@@ -22,12 +16,12 @@ export default {
     ease: {
       type: Number,
       default: 50,
-    },        
+    },
     refresh: {
       type: Boolean,
       default: false,
     },
-  },  
+  },
   setup(props) {
     const canvasRef = ref(null)
     const canvasContainerRef = ref(null)
@@ -40,30 +34,30 @@ export default {
 
     onMounted(() => {
       if (canvasRef.value) {
-        context.value = canvasRef.value.getContext('2d')
+        context.value = canvasRef.value.getContext("2d")
       }
       initCanvas()
       animate()
-      window.addEventListener('resize', initCanvas)
+      window.addEventListener("resize", initCanvas)
     })
 
     onBeforeUnmount(() => {
-      window.removeEventListener('resize', initCanvas)
+      window.removeEventListener("resize", initCanvas)
     })
 
     watch(
       () => mousePosition.value,
       () => {
         onMouseMove()
-      }
+      },
     )
 
     watch(
       () => props.refresh,
       () => {
         initCanvas()
-      }
-    )   
+      },
+    )
 
     const initCanvas = () => {
       resizeCanvas()
@@ -80,7 +74,7 @@ export default {
         if (inside) {
           mouse.x = x
           mouse.y = y
-        }        
+        }
       }
     }
 
@@ -91,12 +85,12 @@ export default {
         canvasSize.h = canvasContainerRef.value.offsetHeight
         canvasRef.value.width = canvasSize.w * dpr
         canvasRef.value.height = canvasSize.h * dpr
-        canvasRef.value.style.width = canvasSize.w + 'px'
-        canvasRef.value.style.height = canvasSize.h + 'px'
+        canvasRef.value.style.width = `${canvasSize.w}px`
+        canvasRef.value.style.height = `${canvasSize.h}px`
         context.value.scale(dpr, dpr)
       }
     }
-    
+
     const circleParams = () => {
       const x = Math.floor(Math.random() * canvasSize.w)
       const y = Math.floor(Math.random() * canvasSize.h)
@@ -104,13 +98,13 @@ export default {
       const translateY = 0
       const size = Math.floor(Math.random() * 2) + 1
       const alpha = 0
-      const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1))
+      const targetAlpha = Number.parseFloat((Math.random() * 0.6 + 0.1).toFixed(1))
       const dx = (Math.random() - 0.5) * 0.2
       const dy = (Math.random() - 0.5) * 0.2
       const magnetism = 0.1 + Math.random() * 4
       return { x, y, translateX, translateY, size, alpha, targetAlpha, dx, dy, magnetism }
     }
-    
+
     const drawCircle = (circle, update = false) => {
       if (context.value) {
         const { x, y, translateX, translateY, size, alpha } = circle
@@ -132,7 +126,7 @@ export default {
         context.value.clearRect(0, 0, canvasSize.w, canvasSize.h)
       }
     }
-    
+
     const drawParticles = () => {
       clearContext()
       const particleCount = props.quantity
@@ -141,12 +135,12 @@ export default {
         drawCircle(circle)
       }
     }
-    
+
     const remapValue = (value, start1, end1, start2, end2) => {
       const remapped = ((value - start1) * (end2 - start2)) / (end1 - start1) + start2
       return remapped > 0 ? remapped : 0
     }
-    
+
     const animate = () => {
       clearContext()
       circles.value.forEach((circle, i) => {
@@ -158,11 +152,12 @@ export default {
           canvasSize.h - circle.y - circle.translateY - circle.size, // distance from bottom edge
         ]
         const closestEdge = edge.reduce((a, b) => Math.min(a, b))
-        const remapClosestEdge = parseFloat(remapValue(closestEdge, 0, 20, 0, 1).toFixed(2))
+        const remapClosestEdge = Number.parseFloat(remapValue(closestEdge, 0, 20, 0, 1).toFixed(2))
         if (remapClosestEdge > 1) {
           circle.alpha += 0.02
-          if (circle.alpha > circle.targetAlpha) circle.alpha = circle.targetAlpha
-        } else {
+          if (circle.alpha > circle.targetAlpha) { circle.alpha = circle.targetAlpha }
+        }
+        else {
           circle.alpha = circle.targetAlpha * remapClosestEdge
         }
         circle.x += circle.dx
@@ -171,10 +166,10 @@ export default {
         circle.translateY += ((mouse.y / (props.staticity / circle.magnetism)) - circle.translateY) / props.ease
         // circle gets out of the canvas
         if (
-          circle.x < -circle.size ||
-          circle.x > canvasSize.w + circle.size ||
-          circle.y < -circle.size ||
-          circle.y > canvasSize.h + circle.size
+          circle.x < -circle.size
+          || circle.x > canvasSize.w + circle.size
+          || circle.y < -circle.size
+          || circle.y > canvasSize.h + circle.size
         ) {
           // remove the circle from the array
           circles.value.splice(i, 1)
@@ -182,7 +177,8 @@ export default {
           const newCircle = circleParams()
           drawCircle(newCircle)
           // update the circle position
-        } else {
+        }
+        else {
           drawCircle(
             {
               ...circle,
@@ -192,12 +188,12 @@ export default {
               translateY: circle.translateY,
               alpha: circle.alpha,
             },
-            true
+            true,
           )
         }
       })
       window.requestAnimationFrame(animate)
-    }    
+    }
 
     return {
       canvasRef,
@@ -206,3 +202,9 @@ export default {
   },
 }
 </script>
+
+<template>
+  <div ref="canvasContainerRef" aria-hidden="true">
+    <canvas ref="canvasRef" />
+  </div>
+</template>
