@@ -6,16 +6,21 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "up": "pnpm update -i -L"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.6.4",
     "@nuxtjs/tailwindcss": "^6.11.3",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "aos": "^2.3.4",
-    "nuxt": "^3.10.0",
-    "swiper": "^11.0.5",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.10.1",
+    "swiper": "^11.0.6",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   }
