@@ -22,5 +22,12 @@ export default defineNuxtConfig({
     "aos/dist/aos.css",
     "~/assets/css/style.css",
   ],
+  vite: {
+    define: { 
+      
+      __GRAD_COLOR1__: JSON.stringify("#33dd55"),
+      __GRAD_COLOR2__: JSON.stringify("#6366F1") 
+    }
+  },
   srcDir: "src",
 })

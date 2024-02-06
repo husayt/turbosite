@@ -28,7 +28,7 @@
             </div>
           </div>
           <h1 class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">
-            The API Security Framework
+            PowerStart.app
           </h1>
           <p class="text-lg text-slate-300 mb-8" data-aos="fade-down" data-aos-delay="200">
             Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.

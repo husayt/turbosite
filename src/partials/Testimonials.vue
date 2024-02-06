@@ -2,7 +2,7 @@
 const active = ref(0)
 const autorotate = ref(true)
 const autorotateTiming = ref(7000)
-const items = [
+const items = ref([
   {
     img: "/images/testimonial-01.jpg",
     quote: "The ability to capture responses is a game-changer. If a user gets tired of the sign up and leaves, that data is still persisted. Additionally, it's great to be able to select between formats.ture responses is a game-changer.",
@@ -21,13 +21,12 @@ const items = [
     name: "Jeff Kahl",
     role: "Appy Product Lead",
   },
-]
+])
 
+const autorotateInterval = ref(null)
 function stopAutorotate() {
   clearInterval(autorotateInterval.value)
 }
-
-let autorotateInterval = ref(null)
 
 onMounted(() => {
   if (autorotate.value) {
@@ -97,7 +96,7 @@ onBeforeUnmount(() => {
           </div>
           <!-- Buttons -->
           <div class="flex flex-wrap justify-center -m-1.5">
-            <template v-for="(item, index) in items" :key="index">
+            <template v-for="(item, index) in items" :key="`xk-${index}`">
               <button
                 class="btn-sm m-1.5 text-xs py-1.5 text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(theme(colors.slate.900),_theme(colors.slate.900))_padding-box,_conic-gradient(theme(colors.slate.400),_theme(colors.slate.700)_25%,_theme(colors.slate.700)_75%,_theme(colors.slate.400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none"
                 :class="active === index ? 'opacity-100' : 'opacity-30 hover:opacity-60'"

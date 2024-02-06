@@ -6,17 +6,21 @@ defineProps<{
 
 <template>
   <div
-    class="bg-gradient-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800 hover:border-slate-700/60 transition-colors group relative">
+    class="bg-gradient-to-tr from-slate-800 to-slate-800/25 rounded-3xl border border-slate-800 hover:border-slate-700/60 transition-colors group relative"
+  >
     <div class="flex flex-col p-5 h-full">
       <div class="flex items-center space-x-3 mb-3">
         <div class="relative">
           <img :src="item.img" width="40" height="40" :alt="item.name">
-          <img v-if="item.featured" class="absolute top-0 -right-1" src="/images/star.svg" width="16" height="16"
-            alt="Star" aria-hidden="true">
+          <img
+            v-if="item.featured" class="absolute top-0 -right-1" src="/images/star.svg" width="16" height="16"
+            alt="Star" aria-hidden="true"
+          >
         </div>
         <router-link
           class="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 group-hover:before:absolute group-hover:before:inset-0"
-          :to="item.link">
+          :to="item.link"
+        >
           {{ item.name }}
         </router-link>
       </div>
