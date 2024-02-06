@@ -1,12 +1,5 @@
-<script>
-import PricingTable from "./PricingTable.vue"
+<script setup lang="ts">
 
-export default {
-  name: "PricingHome",
-  components: {
-    PricingTable,
-  },
-}
 </script>
 
 <template>

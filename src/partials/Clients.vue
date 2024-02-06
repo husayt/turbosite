@@ -1,34 +1,28 @@
-<script>
-import { onMounted } from "vue"
-
+<script lang="ts">
 // Import Swiper
 import Swiper from "swiper"
 import { Autoplay } from "swiper/modules"
 import "swiper/css"
 
 Swiper.use([Autoplay])
+</script>
 
-export default {
-  name: "Clients",
-
-  setup() {
-    onMounted(() => {
-      const carousel = new Swiper(".clients-carousel", {
-        slidesPerView: "auto",
-        spaceBetween: 64,
-        centeredSlides: true,
-        loop: true,
-        speed: 5000,
-        noSwiping: true,
-        noSwipingClass: "swiper-slide",
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: true,
-        },
-      })
-    })
-  },
-}
+<script  setup lang="ts">
+onMounted(() => {
+  const carousel = new Swiper(".clients-carousel", {
+    slidesPerView: "auto",
+    spaceBetween: 64,
+    centeredSlides: true,
+    loop: true,
+    speed: 5000,
+    noSwiping: true,
+    noSwipingClass: "swiper-slide",
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: true,
+    },
+  })
+})
 </script>
 
 <template>
@@ -43,7 +37,9 @@ export default {
         <div class="overflow-hidden">
           <!-- Carousel built with Swiper.js [https://swiperjs.com/] -->
           <!-- * Custom styles in src/css/additional-styles/theme.scss -->
-          <div class="clients-carousel swiper-container relative before:absolute before:inset-0 before:w-32 before:z-10 before:pointer-events-none before:bg-gradient-to-r before:from-slate-900 after:absolute after:inset-0 after:left-auto after:w-32 after:z-10 after:pointer-events-none after:bg-gradient-to-l after:from-slate-900">
+          <div
+            class="clients-carousel swiper-container relative before:absolute before:inset-0 before:w-32 before:z-10 before:pointer-events-none before:bg-gradient-to-r before:from-slate-900 after:absolute after:inset-0 after:left-auto after:w-32 after:z-10 after:pointer-events-none after:bg-gradient-to-l after:from-slate-900"
+          >
             <div class="swiper-wrapper !ease-linear select-none items-center">
               <!-- Carousel items -->
               <div class="swiper-slide !w-auto">

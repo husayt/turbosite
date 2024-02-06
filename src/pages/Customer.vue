@@ -1,18 +1,5 @@
-<script>
-import Header from "~/partials/Header.vue"
+<script  setup lang="ts">
 
-import CustomersRelated from "~/partials/CustomersRelated.vue"
-import Footer from "~/partials/Footer.vue"
-
-export default {
-  name: "Customer",
-  components: {
-    Header,
-
-    CustomersRelated,
-    Footer,
-  },
-}
 </script>
 
 <template>

@@ -1,18 +1,5 @@
-<script>
-import Header from "~/partials/Header.vue"
+<script  setup lang="ts">
 
-import Cta from "~/partials/Cta03.vue"
-import Footer from "~/partials/Footer.vue"
-
-export default {
-  name: "Changelog",
-  components: {
-    Header,
-
-    Cta,
-    Footer,
-  },
-}
 </script>
 
 <template>
@@ -182,7 +169,7 @@ export default {
         </div>
       </section>
 
-      <Cta />
+      <Cta03 />
     </main>
 
     <!-- Site footer -->

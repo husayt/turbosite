@@ -1,8 +1,5 @@
-<script>
-export default {
-  name: "Cta02",
+<script  setup lang="ts">
 
-}
 </script>
 
 <template>

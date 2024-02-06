@@ -1,20 +1,5 @@
-<script>
-import Header from "~/partials/Header.vue"
-import Hero from "~/partials/IntegrationsHero.vue"
-import IntegrationsList from "~/partials/IntegrationsList.vue"
-import Cta from "~/partials/Cta04.vue"
-import Footer from "~/partials/Footer.vue"
+<script  setup lang="ts">
 
-export default {
-  name: "Integrations",
-  components: {
-    Header,
-    Hero,
-    IntegrationsList,
-    Cta,
-    Footer,
-  },
-}
 </script>
 
 <template>
@@ -24,9 +9,9 @@ export default {
 
     <!-- Page content -->
     <main class="grow">
-      <Hero />
+      <IntegrationsHero />
       <IntegrationsList />
-      <Cta />
+      <Cta04 />
     </main>
 
     <!-- Site footer -->

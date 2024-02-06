@@ -1,20 +1,5 @@
-<script>
-import Header from "~/partials/Header.vue"
+<script setup lang="ts">
 
-import CustomersList from "~/partials/CustomersList.vue"
-import Cta from "~/partials/Cta02.vue"
-import Footer from "~/partials/Footer.vue"
-
-export default {
-  name: "Customers",
-  components: {
-    Header,
-
-    CustomersList,
-    Cta,
-    Footer,
-  },
-}
 </script>
 
 <template>
@@ -60,7 +45,7 @@ export default {
           </div>
         </div>
       </section>
-      <Cta />
+      <Cta02 />
     </main>
 
     <!-- Site footer -->

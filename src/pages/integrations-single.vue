@@ -1,16 +1,5 @@
-<script>
-import Header from "~/partials/Header.vue"
+<script  setup lang="ts">
 
-import Footer from "~/partials/Footer.vue"
-
-export default {
-  name: "IntegrationsSingle",
-  components: {
-    Header,
-
-    Footer,
-  },
-}
 </script>
 
 <template>

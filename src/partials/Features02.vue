@@ -1,15 +1,5 @@
-<script>
-import Highlighter from "./Highlighter.vue"
-import HighlighterItem from "./HighlighterItem.vue"
+<script setup lang="ts">
 
-export default {
-  name: "Features02",
-  components: {
-
-    Highlighter,
-    HighlighterItem,
-  },
-}
 </script>
 
 <template>

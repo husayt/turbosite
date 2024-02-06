@@ -1,10 +1,5 @@
-<script>
-export default {
-  name: "Features05",
-  components: {
+<script setup lang="ts">
 
-  },
-}
 </script>
 
 <template>

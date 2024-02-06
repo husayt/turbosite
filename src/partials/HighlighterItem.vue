@@ -1,7 +1,5 @@
-<script>
-export default {
-  name: "HighlighterItem",
-}
+<script setup lang="ts">
+
 </script>
 
 <template>

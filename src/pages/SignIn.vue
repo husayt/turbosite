@@ -1,7 +1,5 @@
-<script>
-export default {
-  name: "SignIn",
-}
+<script  setup lang="ts">
+
 </script>
 
 <template>

@@ -1,26 +1,5 @@
-<script>
-import Header from "~/partials/Header.vue"
-import Hero from "~/partials/HeroAbout.vue"
-import Story from "~/partials/Story.vue"
-import Team from "~/partials/Team.vue"
-import Recruitment from "~/partials/Recruitment.vue"
-import Testimonials from "~/partials/Testimonials02.vue"
-import Cta from "~/partials/Cta02.vue"
-import Footer from "~/partials/Footer.vue"
+<script  setup lang="ts">
 
-export default {
-  name: "About",
-  components: {
-    Header,
-    Hero,
-    Story,
-    Team,
-    Recruitment,
-    Testimonials,
-    Cta,
-    Footer,
-  },
-}
 </script>
 
 <template>
@@ -30,12 +9,12 @@ export default {
 
     <!-- Page content -->
     <main class="grow">
-      <Hero />
+      <HeroAbout />
       <Story />
       <Team />
       <Recruitment />
-      <Testimonials />
-      <Cta />
+      <Testimonials02 />
+      <Cta02 />
     </main>
 
     <!-- Site footer -->

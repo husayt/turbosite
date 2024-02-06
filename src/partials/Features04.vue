@@ -1,7 +1,5 @@
-<script>
-export default {
-  name: "Features04",
-}
+<script setup lang="ts">
+
 </script>
 
 <template>

@@ -1,7 +1,5 @@
-<script>
-export default {
-  name: "ResetPassword",
-}
+<script  setup lang="ts">
+
 </script>
 
 <template>

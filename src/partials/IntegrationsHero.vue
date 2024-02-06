@@ -1,13 +1,5 @@
-<script>
-import IntegrationsCarousel from "./IntegrationsCarousel.vue"
+<script setup lang="ts">
 
-export default {
-  name: "IntegrationsHero",
-  components: {
-
-    IntegrationsCarousel,
-  },
-}
 </script>
 
 <template>
